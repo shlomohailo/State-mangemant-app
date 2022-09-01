@@ -1,27 +1,27 @@
 import { useReducer } from 'react';
 import './App.css'
 import { CounterReducer } from './store/counter-reducer/counder-reducer';
-import { UP_ACTION,DOWN_ACTION,REST_ACTION } from './store/counter-action/counder-action';
+import { upAction, downAction, reset, upDateCouter } from './store/counter-action/counder-action'
 
- let initialstate = 0;
-
- 
+let initialstate = 0;
 
 
 
-// let caseArray = ["UP", "DOWN", "REST"]
+
+
 function App() {
   const [myState, dispatch] = useReducer(CounterReducer, initialstate);
 
   return (
     <div className="App">
-      <h1>{myState}</h1>  
-      {/* {caseArray.map((caseItem)=><button onClick={() => dispatch({ type:caseItem })}>{caseItem}</button>)} */}
+      <h1>{myState}</h1>
 
 
-      <button onClick={() => dispatch(UP_ACTION)}>UP</button>
-      <button onClick={() => dispatch(DOWN_ACTION)}>DOWN</button>
-      <button onClick={() => dispatch(REST_ACTION)}>REST</button>
+      <button onClick={() => dispatch(upAction())}>UP</button>
+      <button onClick={() => dispatch(downAction())}>DOWN</button>
+      <button onClick={() => dispatch(reset())}>REST</button>
+      <button onClick={() => dispatch(upDateCouter(5))}>up date</button>
+
 
 
     </div>
@@ -29,3 +29,8 @@ function App() {
 }
 
 export default App
+
+
+// let caseArray = ["UP", "DOWN", "REST"]
+
+{/* {caseArray.map((caseItem)=><button onClick={() => dispatch({ type:caseItem })}>{caseItem}</button>)} */ }

@@ -1,0 +1,13 @@
+const UP_ACTION = ("UP_ACTION");
+const DOWN_ACTION = ("DOWN_ACTION");
+const REST_ACTION = ("REST_ACTION");
+const UP_DATE_COUNTER = ("UP_DATE_COUNTER");
+
+
+
+export {
+    UP_ACTION,
+    DOWN_ACTION,
+    REST_ACTION,
+    UP_DATE_COUNTER
+}
