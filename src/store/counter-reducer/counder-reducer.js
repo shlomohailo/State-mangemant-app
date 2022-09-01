@@ -1,11 +1,11 @@
-import { UP_ACTION, DOWN_ACTION, REST_ACTION ,UP_DATE_COUNTER} from "../counter-action/counter-types";
+import { UP_ACTION, DOWN_ACTION, REST_ACTION, UP_DATE_COUNTER } from "../counter-action/counter-types";
 
 export function CounterReducer(state, action) {
 
     switch (action.type) {
         case UP_ACTION:
 
-            return state + 1;
+            return +state + 1;
         case DOWN_ACTION:
 
             return state - 1;
